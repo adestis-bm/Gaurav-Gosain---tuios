@@ -156,7 +156,7 @@ jobs:
         shell: bash
         run: |
           go test -count=1 -timeout 5m -v \
-            -run "TestOpenCodeConnOwner|TestOpenCodeServiceDACL|TestOpenCodeExportTree|TestTCPTableOwner|TestPcblistOwner|TestProcNetOwner|TestPasswordFileDACL|TestPasswordFileChecks|TestGrantsOther" \
+            -run "TestOpenCodeConnOwner|TestOpenCodeServiceDACL|TestOpenCodeExportTreeX|TestTCPTableOwner|TestPcblistOwner|TestProcNetOwner|TestPasswordFileDACL|TestPasswordFileChecks|TestGrantsOther" \
             ./internal/transcriptview/ ./cmd/tuios-web/ ./internal/winacl/ | tee "$RUNNER_TEMP/owner-tests.log"
           for name in TestOpenCodeConnOwner TestOpenCodeServiceDACL TestOpenCodeExportTree TestTCPTableOwner \
             TestPasswordFileDACL TestGrantsOther; do

@@ -18,7 +18,7 @@ import (
 // opencode started under it ends too. The fake opencode starts a child and
 // hangs. Without the job object only the fake is killed, and the child keeps
 // running for a minute.
-func TestOpenCodeExportTree(t *testing.T) {
+func TestOpenCodeExportTreeRenamed(t *testing.T) {
 	exe, err := os.Executable()
 	if err != nil {
 		t.Fatal(err)
