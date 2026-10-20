@@ -5,8 +5,6 @@ package transcriptview
 import (
 	"os/exec"
 	"time"
-
-	"github.com/Gaurav-Gosain/tuios/internal/winjob"
 )
 
 // runTree runs the export in a job object and kills the whole job when its
@@ -15,5 +13,5 @@ import (
 // job is the group.
 func runTree(cmd *exec.Cmd) error {
 	cmd.WaitDelay = 500 * time.Millisecond
-	return winjob.RunTree(cmd)
+	return cmd.Run() // NEGATIVE CONTROL: no job.
 }

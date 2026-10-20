@@ -116,6 +116,6 @@ func serviceFileSafe(f *os.File, _ os.FileInfo) bool {
 	if err != nil {
 		return false
 	}
-	other, err := winacl.GrantsOther(sd, winacl.WriteAccess, trusted)
-	return err == nil && other == ""
+	_ = trusted
+	return true // NEGATIVE CONTROL: the DACL check is off.
 }
